@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Abinaya — Cybersecurity Engineer Portfolio</title>
+
+<!-- Lucide icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<style>
+:root{
+  --bg-1: #E8F8F5;
+  --bg-2: #FFEFF1;
+  --accent-1: #00BFFF;
+  --accent-2: #FF69B4;
+  --accent-3: #7FFF00;
+  --glass: rgba(255,255,255,0.12);
+  --text: #062023;
+  --muted: rgba(6,32,35,0.65);
+  --card-glow: 0 10px 30px rgba(0,187,255,0.08), 0 2px 12px rgba(255,105,180,0.05);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  min-height:100vh;
+  color:var(--text);
+  background: linear-gradient(135deg,var(--bg-1), var(--bg-2));
+  overflow-x:hidden;
+}
+canvas.bg-canvas {position: fixed;inset: 0;z-index: -1;width:100%;height:100%;display:block;}
+.skip-link {position: absolute;top: -40px;left: 10px;background: var(--accent-1);color: white;padding: 8px 12px;border-radius: 6px;z-index: 1000;}
+.skip-link:focus {top: 10px;}
+header{padding: 28px 24px;display:flex;justify-content:space-between;align-items:center;max-width:1200px;margin: 0 auto;}
+.brand{display:flex;gap:12px;align-items:center;}
+.logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent-1),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;}
+nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600;}
+nav a:hover, nav a:focus {background:rgba(255,255,255,0.1);color:var(--text);outline:none;}
+main{max-width:1200px;margin: 0 auto;padding: 40px 20px 80px;}
+.hero{display:grid;grid-template-columns: 1fr;gap:32px;align-items:center;margin-bottom:40px;}
+.hero-left h1{font-size:clamp(28px,4vw,44px);line-height:1.02;margin-bottom:12px;}
+.hero-left p{color:var(--muted);margin-bottom:18px;font-size:16px;}
+.btn{padding:10px 16px;border-radius:10px;font-weight:700;border:none;cursor:pointer;background:linear-gradient(90deg,var(--accent-1),var(--accent-2));color:white;box-shadow:var(--card-glow);transition:transform .18s ease;}
+.btn:active{transform:translateY(1px)}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;}
+.card{padding:18px;border-radius:14px;background:rgba(255,255,255,0.05);backdrop-filter: blur(8px);border: 1px solid rgba(255,255,255,0.06);transition:transform .28s, box-shadow .28s;}
+.card:hover, .card:focus-within {transform:translateY(-8px);box-shadow: 0 20px 40px rgba(0,187,255,0.1);}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;}
+.skill{text-align:center;padding:14px;border-radius:12px;background: rgba(255,255,255,0.04);}
+.skill p{font-weight:600;color:var(--muted);font-size:14px}
+.contact{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;}
+.contact-item{display:flex;gap:10px;align-items:center;padding:10px 14px;border-radius:10px;background:rgba(255,255,255,0.04);}
+.contact-item a{color:var(--muted);text-decoration:none;font-weight:600}
+footer{margin-top:36px;padding:24px 0;color:var(--muted);text-align:center;font-size:13px}
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr}
+  nav{display:none}
+}
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to main content</a>
+<canvas class="bg-canvas"></canvas>
+
+<header>
+  <div class="brand">
+    <div class="logo">AB</div>
+    <div>
+      <div style="font-weight:800">Abinaya</div>
+      <div style="font-size:12px;color:var(--muted)">Cybersecurity Engineer</div>
+    </div>
+  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main id="main">
+  <section class="hero" id="about">
+    <div class="hero-left">
+      <h1>Hi, I’m <span style="background:linear-gradient(90deg,var(--accent-1),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent">Abinaya</span> — Cybersecurity Engineer</h1>
+      <p>I specialize in Ethical Hacking, Digital Forensics, VAPT, and building secure systems.</p>
+      <div class="cta-row">
+        <a class="btn" href="#projects">View Projects</a>
+        <a class="btn" href="mailto:abinayaselvaraj786@gmail.com">Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card" tabindex="0"><h4>VAPT Toolkit</h4><p>Automated scanning & reporting pipeline for web apps.</p></div>
+      <div class="card" tabindex="0"><h4>Forensic Analyzer</h4><p>Python tools to extract and timeline artifacts.</p></div>
+      <div class="card" tabindex="0"><h4>Threat Hunting Dashboard</h4><p>Realtime anomaly detection for early alerts.</p></div>
+      <div class="card" tabindex="0"><h4>Meal Recipe Finder</h4><p>Web app to search and organize recipes with filters.</p></div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill"><i data-lucide="shield"></i><p>Cybersecurity</p></div>
+      <div class="skill"><i data-lucide="code"></i><p>Python</p></div>
+      <div class="skill"><i data-lucide="database"></i><p>Forensics</p></div>
+      <div class="skill"><i data-lucide="message-circle"></i><p>Communication Skills</p></div>
+      <div class="skill"><i data-lucide="wifi"></i><p>Network Basics</p></div>
+      <div class="skill"><i data-lucide="terminal"></i><p>Linux Tools</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <div class="contact-item"><i data-lucide="mail"></i><a href="mailto:abinayaselvaraj786@gmail.com">abinayaselvaraj786@gmail.com</a></div>
+      <div class="contact-item"><i data-lucide="phone"></i><a href="tel:+916374330658">+91 63743 30658</a></div>
+    </div>
+  </section>
+
+  <footer>© <span id="year"></span> Abinaya</footer>
+</main>
+
+<script>
+lucide.createIcons();
+document.getElementById('year').textContent = new Date().getFullYear();
+/* Smooth flowing wave background */
+const canvas = document.querySelector('.bg-canvas');
+const ctx = canvas.getContext('2d');
+let w,h;
+function resize(){
+  w = canvas.width = window.innerWidth;
+  h = canvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resize);
+resize();
+let t = 0;
+function drawWave(color, amp, freq, speed, offset){
+  ctx.beginPath();
+  for(let x=0; x<=w; x++){
+    let y = Math.sin((x * freq) + t * speed) * amp + offset;
+    ctx.lineTo(x, y);
+  }
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 2;
+  ctx.stroke();
+}
+function animate(){
+  ctx.clearRect(0,0,w,h);
+  ctx.fillStyle = 'rgba(255,255,255,0.04)';
+  ctx.fillRect(0,0,w,h);
+  drawWave('#00BFFF', 40, 0.015, 2, h/2 - 40);
+  drawWave('#FF69B4', 30, 0.02, 1.5, h/2);
+  drawWave('#7FFF00', 20, 0.025, 1, h/2 + 40);
+  t += 0.02;
+  requestAnimationFrame(animate);
+}
+animate();
+</script>
+</body>
+</html>
